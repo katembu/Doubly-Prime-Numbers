@@ -51,15 +51,20 @@ class Doubly(object):
 
 
 if __name__ == '__main__':
+    N = ''
     try:
         N = int(raw_input("Enter length: "))
+        if N < 1:
+            print ("Length should be greater than 0")
     except ValueError:
         print("That's not an int!")
 
-    # Instantiate
-    doubly = Doubly(N)
-    # Generate Prime Numbers between 1 - N
-    p = list(doubly.prime_number_generator())
-    # Get Doubly Prime Numbers
-    doubly_list = doubly.doubly_list(p)
-    print "Doubly List Between 1 - %s : %s " % (N, doubly_list)
+
+    if N and N > 0:
+        # Instantiate
+        doubly = Doubly(N)
+        # Generate Prime Numbers between 1 - N
+        p = list(doubly.prime_number_generator())
+        # Get Doubly Prime Numbers
+        doubly_list = doubly.doubly_list(p)
+        print "Doubly List Between 1 - %s : %s " % (N, doubly_list)
