@@ -18,15 +18,22 @@ Running Doubly Code
 
 Running Tests
 -------------
-To run the tests, simply run
+To run the tests, simply run:
     > python tests.py
 
 
 Running code Benchmarking
 -------------------------
-    # For OSX / Linux using UNIX `time` command
+For OSX / Linux using UNIX `time` command
     > time python DoublyPrimes.py
-    > When N = 100, you will get something like:
+When N = 100, you will get something like:
     > real	0m2.146s
     > user	0m0.011s
     > sys	0m0.005s
+
+#Using Python Script
+You need to install line profiler:
+Releases of `line_profiler` can be installed using pip_::
+    $ pip install line_profiler
+Then:
+    $ python performance_test.py
